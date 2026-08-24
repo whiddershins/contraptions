@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://contraptions.bookofsarth.com/sitemap.xml
