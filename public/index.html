@@ -92,10 +92,16 @@
   .shot { display: block; margin: 0 0 .85rem; }
   .shot img, .shot video { display: block; width: 100%; height: auto; max-height: 12rem; object-fit: cover; background: #111; }
   .meta { margin: 0 0 .85rem; }
-  .burlap { margin-top: 2.25rem; padding-top: .25rem; }
+  .burlap { margin: 0 0 1.75rem; padding: 0 0 1.5rem; border-bottom: 1px solid #23272d; }
   .looking { margin-top: auto; padding-top: 4rem; }
   .looking h2 { margin-top: 0; }
-  .burlap h2 { color: #e6e6e6; }
+  .burlap h2 { color: #e6e6e6; font-size: .95rem; letter-spacing: .14em; margin: 0 0 .35rem; }
+  .burlap .lede { color: #c8cdd2; font-size: .85rem; margin: 0 0 .85rem; }
+  .burlap .blurb { margin: 0 0 .85rem; }
+  .burlap .shot img { max-height: 18rem; }
+  .burlap .get { display: inline-block; margin: 0 .75rem .75rem 0; padding: .4rem .75rem; border: 1px solid #8fc7ff; color: #8fc7ff; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+  .burlap .get:hover { background: #8fc7ff; color: #0d0f12; }
+  .burlap .meta { margin: 0; }
   footer { margin-top: 1.75rem; }
 </style>
 </head>
@@ -103,6 +109,15 @@
 <main>
   <h1>Contraptions</h1>
   <p class="sub">bookofsarth · small machines · used at <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
+
+  <section class="burlap">
+    <h2>Burlap</h2>
+    <p class="lede">The main machine. Infinite canvas for visual reference prompting.</p>
+    <a class="shot" href="https://burlap.app/download"><img src="/shots/burlap.png" alt="Burlap, infinite canvas for visual reference prompting"></a>
+    <p class="blurb">Native macOS. Roam the field. Sketch, prompt, and sequence on one board. Used at Third Wall Studio.</p>
+    <p><a class="get" href="https://burlap.app/download">Download</a></p>
+    <p class="meta"><a href="https://burlap.app">burlap.app</a> · <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
+  </section>
 
   <h2>Shipped</h2>
   <p class="lede">Machines I made.</p>
@@ -125,19 +140,6 @@
     </details>
   </section>
 
-
-  <section class="burlap">
-    <h2>Burlap</h2>
-    <p class="lede">The main machine. Infinite canvas for visual reference prompting.</p>
-    <details>
-      <summary>
-        <b><a href="https://burlap.app/download">Burlap</a></b>
-        <p class="blurb">Native macOS. Roam the field. Sketch, prompt, and sequence on one board. Used at Third Wall Studio.</p>
-      </summary>
-      <a class="shot" href="https://burlap.app/download"><img src="/shots/burlap.png" alt="" loading="lazy"></a>
-      <p class="meta"><a href="https://burlap.app/download">Download</a> · <a href="https://burlap.app">burlap.app</a> · <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
-    </details>
-  </section>
 
   <section class="looking">
     <h2>Stuff I'm looking at</h2>
