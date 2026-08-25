@@ -1,0 +1,66 @@
+{
+  "name": "Soundscape One",
+  "slug": "soundscape-one",
+  "summary": "A 2D field of sound. You walk; the mix follows. Position is the instrument.",
+  "description": "Walk a 2D field of sound. Position is the instrument. Audio and control stay in the browser. By Sarth Calhoun.",
+  "canonical": "https://contraptions.bookofsarth.com/soundscape-one",
+  "live": "https://contraptions.bookofsarth.com/soundscape-one",
+  "source": "https://github.com/whiddershins/WebAudioSoundscape_01",
+  "creator": "Sarth Calhoun",
+  "creatorUrl": "https://sarth.net",
+  "poster": "https://contraptions.bookofsarth.com/shots/soundscape-one.png",
+  "posterAlt": "Soundscape One, a 2D field of sound. You walk; the mix follows.",
+  "ogImage": "https://contraptions.bookofsarth.com/shots/soundscape-one-og.jpg",
+  "datePublished": "2021-02-23",
+  "dateModified": "2026-08-25",
+  "privacy": "Audio and control stay in the browser. No accounts, no upload.",
+  "hosting": "Cloudflare Workers",
+  "builtWith": [
+    "Web Audio API",
+    "Cloudflare Workers"
+  ],
+  "edges": [
+    {
+      "type": "partOf",
+      "name": "Contraptions",
+      "url": "https://contraptions.bookofsarth.com/"
+    },
+    {
+      "type": "relatedTo",
+      "name": "Image Compare Workbench",
+      "url": "https://contraptions.bookofsarth.com/image-compare-workbench"
+    },
+    {
+      "type": "relatedTo",
+      "name": "Burlap",
+      "url": "https://burlap.app",
+      "note": "Visual reference prompting. This is sound."
+    },
+    {
+      "type": "relatedTo",
+      "name": "Third Wall Studio",
+      "url": "https://thirdwallstudio.com"
+    },
+    {
+      "type": "source",
+      "name": "whiddershins/WebAudioSoundscape_01",
+      "url": "https://github.com/whiddershins/WebAudioSoundscape_01"
+    },
+    {
+      "type": "builtWith",
+      "name": "Web Audio API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
+    },
+    {
+      "type": "builtWith",
+      "name": "PannerNode",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode",
+      "note": "Web Audio spatialization. Position is the mix."
+    },
+    {
+      "type": "builtWith",
+      "name": "GitHub Pages",
+      "url": "https://pages.github.com"
+    }
+  ]
+}

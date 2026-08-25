@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundscape One — Sarth Calhoun</title>
+    <meta name="description" content="A 2D field of sound by Sarth Calhoun. You walk; the mix follows. Position is the instrument.">
+    <link rel="canonical" href="https://contraptions.bookofsarth.com/soundscape-one">
+    <meta name="robots" content="index,follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Contraptions">
+    <meta property="og:title" content="Soundscape One — Sarth Calhoun">
+    <meta property="og:description" content="A 2D field of sound. You walk; the mix follows. Position is the instrument.">
+    <meta property="og:url" content="https://contraptions.bookofsarth.com/soundscape-one">
+    <meta property="og:image" content="https://contraptions.bookofsarth.com/shots/soundscape-one-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Soundscape One, a walker in a 2D field of sound">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@noisegroove">
+    <meta name="twitter:title" content="Soundscape One — Sarth Calhoun">
+    <meta name="twitter:description" content="A 2D field of sound. You walk; the mix follows. Position is the instrument.">
+    <meta name="twitter:image" content="https://contraptions.bookofsarth.com/shots/soundscape-one-og.jpg">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://contraptions.bookofsarth.com/soundscape-one#app","name":"Soundscape One","url":"https://contraptions.bookofsarth.com/soundscape-one","description":"A 2D field of sound. You walk; the mix follows. Position is the instrument.","applicationCategory":"MultimediaApplication","operatingSystem":"Any","image":"https://contraptions.bookofsarth.com/shots/soundscape-one-og.jpg","datePublished":"2021-02-23","creator":{"@id":"https://sarth.net/#person"},"codeRepository":"https://github.com/whiddershins/WebAudioSoundscape_01","isPartOf":{"@id":"https://contraptions.bookofsarth.com/"}},{"@type":"Person","@id":"https://sarth.net/#person","name":"Sarth Calhoun","url":"https://sarth.net","sameAs":["https://x.com/noisegroove","https://github.com/whiddershins"]}]}
+    </script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="controls" >
+<div style="margin-bottom: 25px">
+    <audio src="music/2021_02_23_drumTrance_snapShot01_ambienceAndBass.m4a" loop="True" id="padAudio"></audio>
+    <audio src="music/2021_02_23_drumTrance_melody01a_pianoWanderings_excerpt01.m4a" loop="True" id="pianoAudio"></audio>
+    <audio src="music/2021_02_23_drumTrance_drums01_taikosInFive.m4a" loop="True" id="drumsAudio"></audio>
+    <audio src="music/2021_02_23_drumTrance_clatter02_morePitched.m4a" loop="True" id="clatterAudio"></audio>
+    <button data-playing="false" role="switch" aria-checked="false" id="playPauseAudio">
+        <span id="playPauseLabel">Play/Pause Music</span>
+    </button>
+</div>
+
+<div>
+<div style="float:left; padding:20px;" id="volumeDiv">
+    <label for="volumeControl" style="text-align: left;">VOLUME</label>
+    <input type="range" id="volumeControl" min="0.1" max="2" value="1" step="0.1">
+</div>
+
+<div style="float:left; padding:20px;" class="instructionsAndControls">
+    <p>Use the arrow keys &#8592; &#8593; &#8595; &#8594;<br/>
+        or wasd<br/>
+        or the mouse <br/>
+        to move the ball</p>
+    <p>&nbsp;</p>
+    <p>you can do this whether or not<br/>
+        the ball is moving on its own</p>
+    <p>&nbsp;</p>
+    <button data-playing="false" role="switch" aria-checked="false" id="ballStartStop">
+        <span id="ballStartStopLabel">Play/Pause Ball</span>
+    </button>
+    <p>&nbsp;</p>
+    <p>Angle: <span id="angleReadout">45</span></p>
+    <input type="range" id="ballAngleSlider" min="0" max="2" value="1" step="0.1" style="width:200px;">
+    <p>Size: <span id="sizeReadout">1</span></p>
+    <input type="range" id="ballSizeSlider" min="0.5" max="2" value="1" step="0.1" style="width:200px;">
+    <p>Speed: <span id="speedReadout">2</span></p>
+    <input type="range" id="ballSpeedSlider" min="0.5" max="10" value="2" step="0.1" style="width:200px;">
+    <p>&nbsp;</p>
+    <button id="resetButton" role="switch" aria-checked="false"><span>Reset</span></button>
+    <p>&nbsp;</p>
+    <p>Want to hear the <a href="officeSoundscape_01.html">offices version ...</a></p>
+    <br/>
+    <p>or the original,<br/><a href="musing_in_two_voices.html">simpler two voice version?</a></p>
+
+</div>
+</div>
+</div>
+
+<div class="canvasContainer">
+    <canvas class="canvasBox" id="canvas" width="800" height="600"></canvas>
+</div>
+
+<script type="text/javascript">
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audioContext = new AudioContext();
+
+    const padAudio = document.getElementById('padAudio');
+    const pianoAudio = document.getElementById('pianoAudio');
+    const drumsAudio = document.getElementById('drumsAudio');
+    const clatterAudio = document.getElementById('clatterAudio');
+
+    const padTrack = audioContext.createMediaElementSource(padAudio);
+    const pianoTrack = audioContext.createMediaElementSource(pianoAudio);
+    const drumsTrack = audioContext.createMediaElementSource(drumsAudio);
+    const clatterTrack = audioContext.createMediaElementSource(clatterAudio);
+
+    const padGainNode = audioContext.createGain();
+    const pianoGainNode = audioContext.createGain();
+    const drumsGainNode = audioContext.createGain();
+    const clatterGainNode = audioContext.createGain();
+
+    padTrack.connect(padGainNode).connect(audioContext.destination);
+    pianoTrack.connect(pianoGainNode).connect(audioContext.destination);
+    drumsTrack.connect(drumsGainNode).connect(audioContext.destination);
+    clatterTrack.connect(clatterGainNode).connect(audioContext.destination);
+
+    const playButton = document.getElementById('playPauseAudio');
+
+    playButton.addEventListener('click', function () {
+        let playButtonText = document.getElementById('playPauseLabel');
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
+        if (this.dataset.playing === 'false') {
+            padAudio.play();
+            pianoAudio.play();
+            drumsAudio.play();
+            clatterAudio.play();
+            this.dataset.playing = 'true';
+            playButtonText.textContent = 'Music is Playing';
+        } else if (this.dataset.playing === 'true') {
+            padAudio.pause();
+            pianoAudio.pause();
+            drumsAudio.pause();
+            clatterAudio.pause();
+            this.dataset.playing = 'false';
+            playButtonText.textContent = 'Music is Paused';
+        }
+    }, false);
+
+    const volumeControl = document.getElementById('volumeControl');
+    let overallVolume = 1;
+
+    volumeControl.addEventListener('input', function () {
+        overallVolume = this.value;
+    }, false);
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let ballX = canvas.width / 2 + 300;
+    let ballY = canvas.height - 200;
+    let ballSpeedX = 2;
+    let ballSpeedY = -2;
+    const INITIAL_BALL_RADIUS = 35;
+    let ballRadius = INITIAL_BALL_RADIUS;
+    let angleReadout = document.getElementById('angleReadout');
+		let sizeReadout = document.getElementById('sizeReadout');
+		let speedReadout = document.getElementById('speedReadout');
+    let angleAdjustment = 1; // 45 degrees
+
+    drawBall();
+
+    function drawBall() {
+        ctx.beginPath();
+        ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "0095DD";
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function updateBall() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawBall();
+
+        // Update ball position based on user input
+        if (rightPressed) {
+            ballX += 5;
+        } else if (leftPressed) {
+            ballX -= 5;
+        }
+        if (upPressed) {
+            ballY -= 5;
+        } else if (downPressed) {
+            ballY += 5;
+        }
+
+        // Handle ball collision with canvas boundaries
+        if (ballX + ballSpeedX > canvas.width - ballRadius) {
+            ballX = canvas.width - ballRadius;
+            ballSpeedX = -ballSpeedX;
+        } else if (ballX + ballSpeedX < ballRadius) {
+            ballX = ballRadius;
+            ballSpeedX = -ballSpeedX;
+        }
+        if (ballY + ballSpeedY > canvas.height - ballRadius) {
+            ballY = canvas.height - ballRadius;
+            ballSpeedY = -ballSpeedY;
+        } else if (ballY + ballSpeedY < ballRadius) {
+            ballY = ballRadius;
+            ballSpeedY = -ballSpeedY;
+        }
+
+        // Update ball position based on angle and speed
+        if (playBallButton.dataset.playing === 'true') {
+            ballX += ballSpeedX * angleAdjustment;
+            ballY += ballSpeedY * (2 - Math.abs(angleAdjustment));
+        }
+
+        // Update audio levels based on ball position
+        const verticalProportion = (canvas.height - ballY) / canvas.height;
+        const horizontalProportion = (canvas.width - ballX) / canvas.width;
+
+        padGainNode.gain.value = 3 * verticalProportion * (1 - horizontalProportion) * overallVolume;
+        pianoGainNode.gain.value = 2 * (1 - verticalProportion) * (1 - horizontalProportion) * overallVolume;
+        clatterGainNode.gain.value = 1.5 * (1 - verticalProportion) * horizontalProportion * overallVolume;
+        drumsGainNode.gain.value = 1.5 * verticalProportion * horizontalProportion * overallVolume;
+
+        // Update readouts
+        angleReadout.textContent = (angleAdjustment * 45).toFixed(1);
+		sizeReadout.textContent = (ballRadius / INITIAL_BALL_RADIUS).toFixed(1);
+		speedReadout.textContent = (Math.abs(ballSpeedX)/2);
+    }
+
+    let updateInterval = setInterval(updateBall, 10);
+
+    const ballAngleSlider = document.getElementById('ballAngleSlider');
+    ballAngleSlider.addEventListener('input', function () {
+        angleAdjustment = this.value;
+    }, false);
+
+    const ballSizeSlider = document.getElementById('ballSizeSlider');
+    ballSizeSlider.addEventListener('input', function () {
+        ballRadius = this.value * INITIAL_BALL_RADIUS;
+    }, false);
+
+    const ballSpeedSlider = document.getElementById('ballSpeedSlider');
+    ballSpeedSlider.addEventListener('input', function () {
+        ballSpeedX = (this.value) * Math.sign(ballSpeedX);
+        ballSpeedY = (this.value) * Math.sign(ballSpeedY);
+    });
+
+    const ballStartStopLabel = document.getElementById('ballStartStopLabel');
+    const playBallButton = document.getElementById('ballStartStop');
+    playBallButton.addEventListener('click', function () {
+        if (this.dataset.playing === 'false') {
+            ballStartStopLabel.textContent = 'Ball is Playing';
+            this.dataset.playing = 'true';
+        } else if (this.dataset.playing === 'true') {
+            ballStartStopLabel.textContent = 'Ball is Paused';
+            this.dataset.playing = 'false';
+        }
+    }, false);
+
+	//let's allow the user to explore
+    let rightPressed = false;
+    let leftPressed = false;
+    let upPressed = false;
+    let downPressed = false;
+
+    function keyDownHandler(event) {
+        if (event.key === "Right" || event.key === "ArrowRight") {
+            rightPressed = true;
+        } else if (event.key === "Left" || event.key === "ArrowLeft") {
+            leftPressed = true;
+        } else if (event.key === "Up" || event.key === "ArrowUp") {
+            upPressed = true;
+        } else if (event.key === "Down" || event.key === "ArrowDown") {
+            downPressed = true;
+        }
+    }
+
+    function keyUpHandler(event) {
+        if (event.key === "Right" || event.key === "ArrowRight") {
+            rightPressed = false;
+        } else if (event.key === "Left" || event.key === "ArrowLeft") {
+            leftPressed = false;
+        } else if (event.key === "Up" || event.key === "ArrowUp") {
+            upPressed = false;
+        } else if (event.key === "Down" || event.key === "ArrowDown") {
+            downPressed = false;
+        }
+    }
+
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+
+    canvas.addEventListener("mousedown", mouseDownHandler, false);
+    document.addEventListener("mouseup", mouseUpHandler, false);
+
+    let ballIsGrabbed = false;
+
+    function mouseDownHandler(event) {
+        const relativeX = event.clientX - canvas.offsetLeft;
+        const relativeY = event.clientY - canvas.offsetTop;
+        if (relativeX < ballX + ballRadius && relativeX > ballX - ballRadius &&
+            relativeY < ballY + ballRadius && relativeY > ballY - ballRadius) {
+            ballIsGrabbed = true;
+        } else {
+            ballIsGrabbed = false;
+        }
+    }
+
+    function mouseUpHandler(event) {
+        if (!ballIsGrabbed) {
+            return;
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        ballIsGrabbed = false;
+    }
+
+    function mouseMoveHandler(event) {
+        const relativeX = event.clientX - canvas.offsetLeft;
+        const relativeY = event.clientY - canvas.offsetTop;
+        if (ballIsGrabbed && relativeX > 0 && relativeX < canvas.width &&
+            relativeY > 0 && relativeY < canvas.height) {
+            ballX = relativeX;
+            ballY = relativeY;
+        }
+    }
+
+    const resetButton = document.getElementById('resetButton');
+    resetButton.addEventListener('click', resetBall);
+
+    function resetBall() {
+        ballSpeedX = ballSpeedX > 1 ? 2 : -2;
+        ballSpeedY = ballSpeedY > 1 ? 2 : -2;
+        ballAngleSlider.value = 1;
+        angleAdjustment = 1;
+        ballSizeSlider.value = 1;
+        ballRadius = INITIAL_BALL_RADIUS;
+        ballSpeedSlider.value = 1;
+    }
+</script>
+
+
+<article id="about" style="clear:both;max-width:44rem;margin:2rem auto;padding:0 1.25rem 3rem;font:16px/1.55 ui-monospace,Menlo,Consolas,monospace;color:#222;">
+  <p><a href="/">Contraptions</a> · <a href="https://sarth.net">Sarth Calhoun</a> · <a href="https://github.com/whiddershins/WebAudioSoundscape_01">source</a></p>
+  <h1>Soundscape One</h1>
+  <p>A 2D field of sound by Sarth Calhoun. You walk; the mix follows. Position is the instrument.</p>
+  <h2>How to use</h2>
+  <p>Play/Pause Music. Walk with arrow keys, WASD, or the mouse. The ball can move on its own: Play/Pause Ball, then Angle, Size, Speed, Reset. Volume is the slider on the left. Offices version and the original two-voice version are linked above.</p>
+  <h2>What it is</h2>
+  <p>A playable space, not a playlist. Sound is placed in the plane. Your position is the mix.</p>
+  <h2>Why</h2>
+  <p>To be inside a sound, not in front of a track.</p>
+  <h2>Privacy</h2>
+  <p>Audio and control stay in the browser. No accounts, no analytics, no upload.</p>
+  <h2>Context</h2>
+  <ul>
+    <li>Part of: <a href="https://contraptions.bookofsarth.com/">Contraptions</a></li>
+    <li>Related: <a href="https://contraptions.bookofsarth.com/image-compare-workbench">Image Compare Workbench</a></li>
+    <li>Related: <a href="https://burlap.app">Burlap</a></li>
+    <li>Related: <a href="https://thirdwallstudio.com">Third Wall Studio</a></li>
+    <li>Built with: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+    <li>Source: <a href="https://github.com/whiddershins/WebAudioSoundscape_01">whiddershins/WebAudioSoundscape_01</a></li>
+  </ul>
+  <p><a href="/soundscape-one.md">soundscape-one.md</a> · <a href="/soundscape-one.json">record</a> · All rights reserved.</p>
+</article>
+
+</body>
+</html>
