@@ -4,52 +4,41 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contraptions — Sarth Calhoun</title>
-<meta name="description" content="Small machines by Sarth Calhoun. Image Compare Workbench and Soundscape One. Used at Third Wall Studio.">
+<meta name="description" content="Small machines by Sarth Calhoun. Burlap, Image Compare Workbench, Soundscape One. Used at Third Wall Studio.">
 <link rel="canonical" href="https://contraptions.bookofsarth.com/">
+<link rel="author" href="https://sarth.net">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Contraptions">
 <meta property="og:title" content="Contraptions — Sarth Calhoun">
-<meta property="og:description" content="Small machines by Sarth Calhoun. Image Compare Workbench and Soundscape One. Used at Third Wall Studio.">
+<meta property="og:description" content="Small machines by Sarth Calhoun. Burlap, Image Compare Workbench, Soundscape One.">
 <meta property="og:url" content="https://contraptions.bookofsarth.com/">
-<meta property="og:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench.png">
+<meta property="og:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench-og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@noisegroove">
 <meta name="twitter:title" content="Contraptions — Sarth Calhoun">
-<meta name="twitter:description" content="Small machines by Sarth Calhoun. Image Compare Workbench and Soundscape One. Used at Third Wall Studio.">
-<meta name="twitter:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench.png">
+<meta name="twitter:description" content="Small machines by Sarth Calhoun. Burlap, Image Compare Workbench, Soundscape One.">
+<meta name="twitter:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench-og.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Contraptions",
-  "description": "Small machines by Sarth Calhoun. Image Compare Workbench and Soundscape One. Used at Third Wall Studio.",
-  "url": "https://contraptions.bookofsarth.com/",
-  "numberOfItems": 2,
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "SoftwareApplication",
-        "name": "Image Compare Workbench",
-        "url": "https://contraptions.bookofsarth.com/image-compare-workbench",
-        "description": "One folder of gens. Two click-rails on the same pool. Lock A, walk B. Camera and wipe stay put. Nothing leaves the browser.",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Any",
-        "image": "https://contraptions.bookofsarth.com/shots/image-compare-workbench.png"
-      }
+      "@type": "WebSite",
+      "name": "Contraptions",
+      "url": "https://contraptions.bookofsarth.com/",
+      "description": "Small machines by Sarth Calhoun. Used at Third Wall Studio.",
+      "author": { "@id": "https://sarth.net/#person" }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "SoftwareApplication",
-        "name": "Soundscape One",
-        "url": "https://whiddershins.github.io/WebAudioSoundscape_01/",
-        "description": "A 2D field of sound. You walk; the mix follows. Position is the instrument.",
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "Any",
-        "image": "https://contraptions.bookofsarth.com/shots/soundscape-one.png"
-      }
+      "@type": "Person",
+      "@id": "https://sarth.net/#person",
+      "name": "Sarth Calhoun",
+      "url": "https://sarth.net",
+      "sameAs": ["https://x.com/noisegroove", "https://github.com/whiddershins"]
     }
   ]
 }
@@ -59,111 +48,104 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    min-height: 100vh;
     background: #0d0f12;
     color: #e6e6e6;
-    font: 16px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font: 15px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
-  main {
-    max-width: 52rem;
-    margin: 0 auto;
-    padding: 2.5rem 1.25rem 3rem;
-  }
-  header h1 {
-    font-size: 1.35rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    margin: 0 0 .35rem;
-    font-weight: 600;
-  }
-  header .sub {
-    color: #7c848d;
-    margin: 0 0 2rem;
-    font-size: .85rem;
-  }
-  header .sub a { color: #7c848d; }
-  a { color: #e6e6e6; text-decoration: none; }
+  main { max-width: 40rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; }
+  h1 { font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .25rem; }
+  .sub, .lede, .meta, footer { color: #7c848d; font-size: .75rem; }
+  .sub { margin: 0 0 1.25rem; }
+  a { color: inherit; text-decoration: none; }
   a:hover { color: #8fc7ff; }
-  .grid { display: grid; gap: 1.25rem; }
-  article {
-    background: #12151a;
-    border: 1px solid #23272d;
-    padding: 0;
-    overflow: hidden;
+  h2 { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: #7c848d; margin: 1.75rem 0 .15rem; }
+  .lede { margin: 0 0 .35rem; }
+  details { border-top: 1px solid #23272d; }
+  section details:last-of-type { border-bottom: 1px solid #23272d; }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: .85rem 1.5rem .85rem 0;
+    position: relative;
   }
-  article .shot {
-    display: block;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-  }
-  article img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    aspect-ratio: 16 / 9;
-  }
-  article .body { padding: 1rem 1.1rem 1.15rem; }
-  article h2 {
-    font-size: 1.05rem;
-    margin: 0 0 .5rem;
-    font-weight: 600;
-    letter-spacing: .02em;
-  }
-  article .blurb {
-    margin: 0 0 .75rem;
-    font-size: .92rem;
-    color: #c8cdd2;
-  }
-  article .meta {
-    margin: 0;
-    font-size: .75rem;
+  summary::-webkit-details-marker, summary::marker { display: none; content: none; }
+  summary::after {
+    content: "›";
+    position: absolute;
+    right: 0;
+    top: .85rem;
     color: #7c848d;
+    font-size: 1.1rem;
+    transform: rotate(90deg);
   }
-  article .meta a { color: #7c848d; }
-  article .meta a:hover { color: #8fc7ff; }
-  footer {
-    margin-top: 2rem;
-    font-size: .75rem;
-    color: #7c848d;
-  }
-  footer a { color: #7c848d; }
-  footer a:hover { color: #8fc7ff; }
+  details[open] summary::after { transform: rotate(-90deg); }
+  summary b { display: block; font-size: 1rem; color: #e6e6e6; margin: 0 0 .35rem; font-weight: 600; }
+  .blurb { margin: 0; color: #c8cdd2; }
+  .shot { display: block; margin: 0 0 .85rem; }
+  .shot img, .shot video { display: block; width: 100%; height: auto; max-height: 12rem; object-fit: cover; background: #111; }
+  .meta { margin: 0 0 .85rem; }
+  .burlap { margin-top: 2.25rem; padding-top: .25rem; }
+  .burlap h2 { color: #e6e6e6; }
+  footer { margin-top: 1.75rem; }
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <h1>Contraptions</h1>
-    <p class="sub">bookofsarth &middot; small machines &middot; used at <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
-  </header>
-  <div class="grid">
-    <article>
-      <a class="shot" href="/image-compare-workbench">
-        <img src="/shots/image-compare-workbench.png" alt="Image Compare Workbench — wipe and click-rails on a folder of gens" width="1280" height="720">
-      </a>
-      <div class="body">
-        <h2><a href="/image-compare-workbench">Image Compare Workbench</a></h2>
+  <h1>Contraptions</h1>
+  <p class="sub">bookofsarth · small machines · used at <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
+
+  <h2>Shipped</h2>
+  <p class="lede">Machines I made.</p>
+  <section>
+    <details>
+      <summary>
+        <b><a href="/image-compare-workbench">Image Compare Workbench</a></b>
         <p class="blurb">One folder of gens. Two click-rails on the same pool. Lock A, walk B. Camera and wipe stay put. Nothing leaves the browser.</p>
-        <p class="meta">Used at <a href="https://thirdwallstudio.com">Third Wall Studio</a> &middot; <a href="/image-compare-workbench.md">md</a> &middot; <a href="https://github.com/whiddershins/image-compare-workbench">github</a></p>
-      </div>
-    </article>
-    <article>
-      <a class="shot" href="https://whiddershins.github.io/WebAudioSoundscape_01/">
-        <img src="/shots/soundscape-one.png" alt="Soundscape One — a 2D field of sound" width="1280" height="720">
-      </a>
-      <div class="body">
-        <h2><a href="https://whiddershins.github.io/WebAudioSoundscape_01/">Soundscape One</a></h2>
+      </summary>
+      <a class="shot" href="/image-compare-workbench"><video poster="/shots/image-compare-workbench-poster.jpg" src="/shots/image-compare-workbench.mp4" width="1920" height="1080" muted autoplay loop playsinline preload="metadata"></video></a>
+      <p class="meta">Used at <a href="https://thirdwallstudio.com">Third Wall Studio</a> · <a href="/image-compare-workbench.md">md</a> · <a href="https://github.com/whiddershins/image-compare-workbench">github</a></p>
+    </details>
+    <details>
+      <summary>
+        <b><a href="https://whiddershins.github.io/WebAudioSoundscape_01/">Soundscape One</a></b>
         <p class="blurb">A 2D field of sound. You walk; the mix follows. Position is the instrument.</p>
-        <p class="meta">Used at <a href="https://thirdwallstudio.com">Third Wall Studio</a> &middot; <a href="/soundscape-one.md">md</a> &middot; <a href="https://github.com/whiddershins/WebAudioSoundscape_01">github</a></p>
-      </div>
-    </article>
-  </div>
+      </summary>
+      <a class="shot" href="https://whiddershins.github.io/WebAudioSoundscape_01/"><img src="/shots/soundscape-one.png" alt="" width="1280" height="720" loading="lazy"></a>
+      <p class="meta">Used at <a href="https://thirdwallstudio.com">Third Wall Studio</a> · <a href="/soundscape-one.md">md</a> · <a href="https://github.com/whiddershins/WebAudioSoundscape_01">github</a></p>
+    </details>
+  </section>
+
+  <h2>Looking at</h2>
+  <p class="lede">Other people's machines. Not mine.</p>
+  <section>
+    <details>
+      <summary>
+        <b><a href="/paint-with-javascript">Paint with JavaScript</a></b>
+        <p class="blurb">Surya Narreddi RL'd Qwen to paint in p5.js. The sketch is the painting. You edit the code, not the prompt.</p>
+      </summary>
+      <a class="shot" href="/paint-with-javascript"><img src="/shots/paint-with-javascript.png" alt="" width="1200" height="630" loading="lazy"></a>
+      <p class="meta"><a href="https://surya.website/rling-qwen-to-paint-with-code">write-up</a> · <a href="https://x.com/kickingkeys/status/2091621857388605653">post</a> · <a href="/paint-with-javascript.md">md</a></p>
+    </details>
+  </section>
+
+  <section class="burlap">
+    <h2>Burlap</h2>
+    <p class="lede">The main machine. Infinite canvas for visual reference prompting.</p>
+    <details>
+      <summary>
+        <b><a href="https://burlap.app/download">Burlap</a></b>
+        <p class="blurb">Native macOS. Roam the field. Sketch, prompt, and sequence on one board. Used at Third Wall Studio.</p>
+      </summary>
+      <a class="shot" href="https://burlap.app/download"><img src="/shots/burlap.png" alt="" loading="lazy"></a>
+      <p class="meta"><a href="https://burlap.app/download">Download</a> · <a href="https://burlap.app">burlap.app</a> · <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
+    </details>
+  </section>
+
   <footer>
     <a href="https://sarth.net">sarth.net</a>
-    &middot; <a href="https://github.com/whiddershins/contraptions">github/whiddershins/contraptions</a>
-    &middot; <a href="https://thirdwallstudio.com">Third Wall Studio</a>
-    &middot; Hosted on Cloudflare Workers
+    · <a href="https://github.com/whiddershins/contraptions">github/whiddershins/contraptions</a>
+    · <a href="https://thirdwallstudio.com">Third Wall Studio</a>
+    · Hosted on Cloudflare Workers
   </footer>
 </main>
 </body>

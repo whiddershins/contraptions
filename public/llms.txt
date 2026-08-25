@@ -1,0 +1,21 @@
+# Contraptions
+
+Small machines by Sarth Calhoun. Used at Third Wall Studio.
+https://contraptions.bookofsarth.com/
+https://sarth.net
+https://thirdwallstudio.com
+
+## Image Compare Workbench
+Drop a folder of images. Click a reference on one rail, click candidates on the other. The camera stays put. Local, in the browser.
+https://contraptions.bookofsarth.com/image-compare-workbench
+https://contraptions.bookofsarth.com/image-compare-workbench.json
+https://github.com/whiddershins/image-compare-workbench
+
+## Soundscape One
+A 2D field of sound. You walk; the mix follows.
+https://whiddershins.github.io/WebAudioSoundscape_01/
+https://github.com/whiddershins/WebAudioSoundscape_01
+
+## Burlap
+Native macOS infinite canvas for visual reference prompting.
+https://burlap.app/download

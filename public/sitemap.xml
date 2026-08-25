@@ -2,14 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://contraptions.bookofsarth.com/</loc>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://contraptions.bookofsarth.com/image-compare-workbench</loc>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://contraptions.bookofsarth.com/image-compare-workbench.md</loc>
+  </url>
+  <url>
+    <loc>https://contraptions.bookofsarth.com/image-compare-workbench.json</loc>
   </url>
   <url>
     <loc>https://whiddershins.github.io/WebAudioSoundscape_01/</loc>
@@ -17,4 +22,8 @@
   <url>
     <loc>https://contraptions.bookofsarth.com/soundscape-one.md</loc>
   </url>
+  <url>
+    <loc>https://contraptions.bookofsarth.com/paint-with-javascript</loc>
+  </url>
 </urlset>
+
