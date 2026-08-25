@@ -13,7 +13,7 @@
 <meta property="og:title" content="Contraptions — Sarth Calhoun">
 <meta property="og:description" content="Small machines by Sarth Calhoun. Burlap, Image Compare Workbench, Soundscape One.">
 <meta property="og:url" content="https://contraptions.bookofsarth.com/">
-<meta property="og:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench-og.jpg">
+<meta property="og:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench-og-2.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
 <meta name="twitter:site" content="@noisegroove">
 <meta name="twitter:title" content="Contraptions — Sarth Calhoun">
 <meta name="twitter:description" content="Small machines by Sarth Calhoun. Burlap, Image Compare Workbench, Soundscape One.">
-<meta name="twitter:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench-og.jpg">
+<meta name="twitter:image" content="https://contraptions.bookofsarth.com/shots/image-compare-workbench-og-2.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,29 +60,13 @@
   a:hover { color: #8fc7ff; }
   h2 { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: #7c848d; margin: 1.75rem 0 .15rem; }
   .lede { margin: 0 0 .35rem; }
-  details { border-top: 1px solid #23272d; }
-  section details:last-of-type { border-bottom: 1px solid #23272d; }
-  summary {
-    cursor: pointer;
-    list-style: none;
-    padding: .85rem 1.5rem .85rem 0;
-    position: relative;
-  }
-  summary::-webkit-details-marker, summary::marker { display: none; content: none; }
-  summary::after {
-    content: "›";
-    position: absolute;
-    right: 0;
-    top: .85rem;
-    color: #7c848d;
-    font-size: 1.1rem;
-    transform: rotate(90deg);
-  }
-  details[open] summary::after { transform: rotate(-90deg); }
-  summary b { display: block; font-size: 1rem; color: #e6e6e6; margin: 0 0 .35rem; font-weight: 600; }
-  .blurb { margin: 0; color: #c8cdd2; }
+  article { border-top: 1px solid #23272d; padding: .85rem 0 1.1rem; }
+  section article:last-of-type { border-bottom: 1px solid #23272d; }
+  article h3 { display: block; font-size: 1rem; color: #e6e6e6; margin: 0 0 .35rem; font-weight: 600; }
+  article h3 a:hover { color: #8fc7ff; }
+  .blurb { margin: 0 0 .85rem; color: #c8cdd2; }
   .shot { display: block; margin: 0 0 .85rem; }
-  .shot img, .shot video { display: block; width: 100%; height: auto; max-height: 12rem; object-fit: cover; background: #111; }
+  .shot img, .shot video { display: block; width: 100%; height: auto; max-height: 16rem; object-fit: cover; background: #111; }
   .meta { margin: 0 0 .85rem; }
   .burlap { margin: 0 0 1.75rem; padding: 0 0 1.5rem; border-bottom: 1px solid #23272d; }
   .looking { margin-top: 2.25rem; padding-top: 1.25rem; }
@@ -114,38 +98,30 @@
   <h2>Shipped</h2>
   <p class="lede">Machines I made.</p>
   <section>
-    <details>
-      <summary>
-        <b><a href="/image-compare-workbench">Image Compare Workbench</a></b>
-        <p class="blurb">One folder of gens. Two click-rails on the same pool. Lock A, walk B. Camera and wipe stay put. Nothing leaves the browser.</p>
-      </summary>
-      <a class="shot" href="/image-compare-workbench"><video poster="/shots/image-compare-workbench-poster.jpg" src="/shots/image-compare-workbench.mp4" width="1920" height="1080" muted autoplay loop playsinline preload="metadata"></video></a>
+    <article>
+      <h3><a href="/image-compare-workbench">Image Compare Workbench</a></h3>
+      <p class="blurb">One folder of gens. Two click-rails on the same pool. Lock A, walk B. Camera and wipe stay put. Nothing leaves the browser.</p>
+      <a class="shot" href="/image-compare-workbench"><img src="/shots/image-compare-workbench-poster.jpg" alt="Image Compare Workbench, two click-rails over one image pool" width="1920" height="1080"></a>
       <p class="meta">Used at <a href="https://thirdwallstudio.com">Third Wall Studio</a> · <a href="/image-compare-workbench.md">md</a> · <a href="https://github.com/whiddershins/image-compare-workbench">github</a></p>
-    </details>
-    <details>
-      <summary>
-        <b><a href="https://whiddershins.github.io/WebAudioSoundscape_01/">Soundscape One</a></b>
-        <p class="blurb">A 2D field of sound. You walk; the mix follows. Position is the instrument.</p>
-      </summary>
-      <a class="shot" href="https://whiddershins.github.io/WebAudioSoundscape_01/"><img src="/shots/soundscape-one.png" alt="" width="1280" height="720" loading="lazy"></a>
+    </article>
+    <article>
+      <h3><a href="https://whiddershins.github.io/WebAudioSoundscape_01/">Soundscape One</a></h3>
+      <p class="blurb">A 2D field of sound. You walk; the mix follows. Position is the instrument.</p>
+      <a class="shot" href="https://whiddershins.github.io/WebAudioSoundscape_01/"><img src="/shots/soundscape-one.png" alt="Soundscape One" width="1280" height="720" loading="lazy"></a>
       <p class="meta">Used at <a href="https://thirdwallstudio.com">Third Wall Studio</a> · <a href="/soundscape-one.md">md</a> · <a href="https://github.com/whiddershins/WebAudioSoundscape_01">github</a></p>
-    </details>
+    </article>
   </section>
 
 
   <section class="looking">
     <h2>Stuff I'm looking at</h2>
     <p class="lede">Other people's machines. Not mine.</p>
-    <section>
-      <details>
-        <summary>
-          <b><a href="/paint-with-javascript">Paint with JavaScript</a></b>
-          <p class="blurb">Surya Narreddi RL'd Qwen to paint in p5.js. The sketch is the painting. You edit the code, not the prompt.</p>
-        </summary>
-        <a class="shot" href="/paint-with-javascript"><img src="/shots/paint-with-javascript.png" alt="" width="1200" height="630" loading="lazy"></a>
-        <p class="meta"><a href="https://surya.website/rling-qwen-to-paint-with-code">write-up</a> · <a href="https://x.com/kickingkeys/status/2091621857388605653">post</a> · <a href="/paint-with-javascript.md">md</a></p>
-      </details>
-    </section>
+    <article>
+      <h3><a href="/paint-with-javascript">Paint with JavaScript</a></h3>
+      <p class="blurb">Surya Narreddi RL'd Qwen to paint in p5.js. The sketch is the painting. You edit the code, not the prompt.</p>
+      <a class="shot" href="/paint-with-javascript"><img src="/shots/paint-with-javascript.png" alt="Paint with JavaScript" width="1200" height="630" loading="lazy"></a>
+      <p class="meta"><a href="https://surya.website/rling-qwen-to-paint-with-code">write-up</a> · <a href="https://x.com/kickingkeys/status/2091621857388605653">post</a> · <a href="/paint-with-javascript.md">md</a></p>
+    </article>
   </section>
 
   <footer>
