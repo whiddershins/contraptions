@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "contraptions",
+  "account_id": "a750b82b27285ba96770503fbb636e64",
   "main": "src/index.js",
   "compatibility_date": "2026-08-24",
   "workers_dev": true,

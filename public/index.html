@@ -52,7 +52,15 @@
     color: #e6e6e6;
     font: 15px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
-  main { max-width: 40rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; }
+  body { min-height: 100vh; }
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
   h1 { font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .25rem; }
   .sub, .lede, .meta, footer { color: #7c848d; font-size: .75rem; }
   .sub { margin: 0 0 1.25rem; }
@@ -85,6 +93,8 @@
   .shot img, .shot video { display: block; width: 100%; height: auto; max-height: 12rem; object-fit: cover; background: #111; }
   .meta { margin: 0 0 .85rem; }
   .burlap { margin-top: 2.25rem; padding-top: .25rem; }
+  .looking { margin-top: auto; padding-top: 4rem; }
+  .looking h2 { margin-top: 0; }
   .burlap h2 { color: #e6e6e6; }
   footer { margin-top: 1.75rem; }
 </style>
@@ -115,18 +125,6 @@
     </details>
   </section>
 
-  <h2>Looking at</h2>
-  <p class="lede">Other people's machines. Not mine.</p>
-  <section>
-    <details>
-      <summary>
-        <b><a href="/paint-with-javascript">Paint with JavaScript</a></b>
-        <p class="blurb">Surya Narreddi RL'd Qwen to paint in p5.js. The sketch is the painting. You edit the code, not the prompt.</p>
-      </summary>
-      <a class="shot" href="/paint-with-javascript"><img src="/shots/paint-with-javascript.png" alt="" width="1200" height="630" loading="lazy"></a>
-      <p class="meta"><a href="https://surya.website/rling-qwen-to-paint-with-code">write-up</a> · <a href="https://x.com/kickingkeys/status/2091621857388605653">post</a> · <a href="/paint-with-javascript.md">md</a></p>
-    </details>
-  </section>
 
   <section class="burlap">
     <h2>Burlap</h2>
@@ -139,6 +137,21 @@
       <a class="shot" href="https://burlap.app/download"><img src="/shots/burlap.png" alt="" loading="lazy"></a>
       <p class="meta"><a href="https://burlap.app/download">Download</a> · <a href="https://burlap.app">burlap.app</a> · <a href="https://thirdwallstudio.com">Third Wall Studio</a></p>
     </details>
+  </section>
+
+  <section class="looking">
+    <h2>Stuff I'm looking at</h2>
+    <p class="lede">Other people's machines. Not mine.</p>
+    <section>
+      <details>
+        <summary>
+          <b><a href="/paint-with-javascript">Paint with JavaScript</a></b>
+          <p class="blurb">Surya Narreddi RL'd Qwen to paint in p5.js. The sketch is the painting. You edit the code, not the prompt.</p>
+        </summary>
+        <a class="shot" href="/paint-with-javascript"><img src="/shots/paint-with-javascript.png" alt="" width="1200" height="630" loading="lazy"></a>
+        <p class="meta"><a href="https://surya.website/rling-qwen-to-paint-with-code">write-up</a> · <a href="https://x.com/kickingkeys/status/2091621857388605653">post</a> · <a href="/paint-with-javascript.md">md</a></p>
+      </details>
+    </section>
   </section>
 
   <footer>
