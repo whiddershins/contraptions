@@ -10,3 +10,5 @@ One folder of gens. Two click-rails on the same pool. Lock A, walk B. Camera and
 - Shelf: https://contraptions.bookofsarth.com
 
 Svelte 5, Vite, TypeScript. Client-only. Images stay as File objects and blob URLs. Hosted on Cloudflare Workers.
+
+Sat with [imgsli](https://imgsli.com/) and [Improve ImgSLI](https://github.com/Loganavter/Improve-ImgSLI). One local pool, two independent click-rails.
