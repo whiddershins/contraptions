@@ -1,6 +1,6 @@
 # Kick with Reverb
 
-Looking at. zhinit's kick sequencer. Kick, noise, reverb layers, then a mastering chain. Diffusion kicks behind a login.
+Looking at. Zach Hill's kick sequencer. Kick, noise, reverb layers, then a mastering chain. Diffusion kicks behind a login.
 
 Not mine.
 
