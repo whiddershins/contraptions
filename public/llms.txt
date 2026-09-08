@@ -19,3 +19,11 @@ https://github.com/whiddershins/WebAudioSoundscape_01
 ## Burlap
 Native macOS infinite canvas for visual reference prompting.
 https://burlap.app/download
+
+<!-- fm6-record:start -->
+## FM / 6
+A six-operator synthesizer by Sarth Calhoun. Start with a bell, a bass or a slowly moving chord. Change the operators and hear how the sound is made.
+https://contraptions.bookofsarth.com/fm6/
+https://contraptions.bookofsarth.com/fm6.md
+https://contraptions.bookofsarth.com/fm6.json
+<!-- fm6-record:end -->

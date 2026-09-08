@@ -2,3 +2,7 @@ node_modules/
 .wrangler/
 .dev.vars
 .DS_Store
+
+# FM6 runtime is rebuilt from the pinned source checkout.
+public/fm6/assets/
+public/fm6/wasm/

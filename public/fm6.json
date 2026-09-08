@@ -1,0 +1,88 @@
+{
+  "name": "FM / 6",
+  "slug": "fm6",
+  "summary": "Six operators. Two keyboards. A sound you can take apart.",
+  "description": "A six-operator synthesizer by Sarth Calhoun. Start with a bell, a bass or a slowly moving chord. Change the operators and hear how the sound is made.",
+  "canonical": "https://contraptions.bookofsarth.com/fm6/",
+  "live": "https://contraptions.bookofsarth.com/fm6/",
+  "source": "https://github.com/whiddershins/agent-synth-magic",
+  "sourceAccess": "private",
+  "sourceCommit": "25724c774cf99630df162866e8718bba9d76af09",
+  "creator": "Sarth Calhoun",
+  "creatorUrl": "https://sarth.net",
+  "poster": "https://contraptions.bookofsarth.com/shots/fm6-og.png",
+  "posterAlt": "FM / 6 showing waveform, pitch and envelope controls beside a signal-routing diagram.",
+  "posterWidth": 1200,
+  "posterHeight": 630,
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
+  "hosting": "Cloudflare Workers",
+  "privacy": "Sound synthesis, playing and audition rendering happen in your browser. Saved patches stay in this browser on this site. No account, microphone access or model calls are needed. JSON export makes a portable copy.",
+  "why": "To make the relationships inside a sound playable and understandable. Each operator explains its role in the current patch and suggests a useful change to try.",
+  "features": [
+    "Six operators, each with sine, triangle, saw, square or noise, tuning and a delay–attack–hold–decay–sustain–release envelope.",
+    "Four FM routings, optional pitch envelopes and filters for each operator, plus a shared pitch envelope and output filter.",
+    "One LFO with four assignable routes, and reverb for a shared sense of space.",
+    "Two touch keyboards with separate octave, detune and sustain latches. Drag to glide; tap a latched note again to release it.",
+    "MIDI and MPE input in supporting browsers, including independent pitch bend, pressure and timbre.",
+    "Ten starting patches, editable operator notes, named saves, JSON import/export and a repeatable five-second WAV audition."
+  ],
+  "guide": [
+    {
+      "title": "Start with a sound",
+      "text": "Choose Glass garden for a bell, Rubber bass for a pluck, or Slow orbit for a slowly moving tone. Enable audio, then play the on-screen keys or A–K on your computer keyboard. Start with your listening volume low."
+    },
+    {
+      "title": "Follow the carrier",
+      "text": "A carrier adds directly to the sound you hear. Raise its Level to bring that layer forward. A modulator changes another operator’s tone: raise its Level for more brightness or grit. The routing diagram shows which is which."
+    },
+    {
+      "title": "Give the sound a shape",
+      "text": "Lengthen Attack for a softer entrance. Lengthen Decay for a longer ring. Raise Sustain to keep more tone while a key is held; lengthen Release for a gentler ending. A modulator’s envelope moves the brightness through the note."
+    },
+    {
+      "title": "Try a bend or a darker edge",
+      "text": "Turn on an operator’s Pitch envelope for a pitch sweep. Choose a low-pass filter and lower Cutoff to soften its high end. The technical explanation and Try line on each operator follow the current controls."
+    },
+    {
+      "title": "Let a chord keep going",
+      "text": "Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Stop all clears both keyboards."
+    },
+    {
+      "title": "Keep the patch",
+      "text": "Save patch… opens a naming dialog. A new name makes a new entry; Replace saved patch explicitly updates an existing one. Export JSON keeps a file you can load in another browser or device. Render & listen plays the same phrase for comparisons and offers a WAV download."
+    }
+  ],
+  "edges": [
+    {
+      "type": "partOf",
+      "name": "Contraptions",
+      "url": "https://contraptions.bookofsarth.com/",
+      "note": "Sarth Calhoun’s shelf of small machines."
+    },
+    {
+      "type": "relatedTo",
+      "name": "Soundscape One",
+      "url": "https://contraptions.bookofsarth.com/soundscape-one",
+      "note": "Another browser instrument by Sarth: position changes the mix there; operator relationships shape the tone here."
+    },
+    {
+      "type": "builtWith",
+      "name": "WebAssembly",
+      "url": "https://webassembly.org/",
+      "note": "Runs the C++ sound engine in the browser."
+    },
+    {
+      "type": "builtWith",
+      "name": "Web Audio API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API",
+      "note": "An AudioWorklet plays the engine; a separate instance renders repeatable auditions."
+    },
+    {
+      "type": "builtWith",
+      "name": "Codex",
+      "url": "https://openai.com/codex/",
+      "note": "Implementation assistance, guided by Sarth’s sound-design and interaction choices."
+    }
+  ]
+}

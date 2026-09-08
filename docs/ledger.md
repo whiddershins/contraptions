@@ -24,3 +24,15 @@ Every ship gets README + slug md + DESIGN (when there is a product decision) and
 - one-liner: A controllable 2D Web Audio soundscape. Position is the instrument.
 - syndication: A playable 2D soundscape. Position is the instrument.
 - related: Image Compare Workbench
+
+<!-- fm6-record:start -->
+## FM / 6
+
+- canonical and live: https://contraptions.bookofsarth.com/fm6/
+- source: https://github.com/whiddershins/agent-synth-magic (private), 25724c774cf99630df162866e8718bba9d76af09
+- poster: https://contraptions.bookofsarth.com/shots/fm6-og.png
+- description: Six operators. Two keyboards. A sound you can take apart.
+- related: Soundscape One
+- published: 2026-09-08
+- syndication: not sent; requires the owner’s instruction
+<!-- fm6-record:end -->
