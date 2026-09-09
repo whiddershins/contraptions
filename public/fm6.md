@@ -28,7 +28,7 @@ Turn on an operator’s Pitch envelope for a pitch sweep. Choose a low-pass filt
 
 ### Let a chord keep going
 
-Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Stop all clears both keyboards.
+Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Choose or load another patch while the notes keep going. Routing, waveforms and pitch-envelope shapes take effect on the next note. Stop all clears both keyboards.
 
 ### Keep the patch
 
@@ -64,5 +64,5 @@ Saved patches do not automatically transfer between sites. Export JSON on the fi
 ## Source
 
 Private repository: https://github.com/whiddershins/agent-synth-magic
-Revision: 25724c774cf99630df162866e8718bba9d76af09
+Revision: e6b1f523484b17e9ee3c6b97be3051e6f40a1fb4
 Release record: https://contraptions.bookofsarth.com/fm6.json

@@ -7,7 +7,7 @@
   "live": "https://contraptions.bookofsarth.com/fm6/",
   "source": "https://github.com/whiddershins/agent-synth-magic",
   "sourceAccess": "private",
-  "sourceCommit": "25724c774cf99630df162866e8718bba9d76af09",
+  "sourceCommit": "e6b1f523484b17e9ee3c6b97be3051e6f40a1fb4",
   "creator": "Sarth Calhoun",
   "creatorUrl": "https://sarth.net",
   "poster": "https://contraptions.bookofsarth.com/shots/fm6-og.png",
@@ -15,7 +15,7 @@
   "posterWidth": 1200,
   "posterHeight": 630,
   "datePublished": "2026-09-08",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-09",
   "hosting": "Cloudflare Workers",
   "privacy": "Sound synthesis, playing and audition rendering happen in your browser. Saved patches stay in this browser on this site. No account, microphone access or model calls are needed. JSON export makes a portable copy.",
   "why": "To make the relationships inside a sound playable and understandable. Each operator explains its role in the current patch and suggests a useful change to try.",
@@ -46,7 +46,7 @@
     },
     {
       "title": "Let a chord keep going",
-      "text": "Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Stop all clears both keyboards."
+      "text": "Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Choose or load another patch while the notes keep going. Routing, waveforms and pitch-envelope shapes take effect on the next note. Stop all clears both keyboards."
     },
     {
       "title": "Keep the patch",
