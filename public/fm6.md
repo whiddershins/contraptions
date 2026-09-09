@@ -28,11 +28,15 @@ Turn on an operator’s Pitch envelope for a pitch sweep. Choose a low-pass filt
 
 ### Let a chord keep going
 
-Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Choose or load another patch while the notes keep going. Routing, waveforms and pitch-envelope shapes take effect on the next note. Stop all clears both keyboards.
+Turn on either keyboard’s Sustain latch, then tap a few notes. Tap a lit note again to release just that note. Add a few cents of detune on the second keyboard for beating between equal pitches. Choose or load another patch while the notes keep going. Routing and Wave changes blend over 30 ms while the notes sustain. Captured pitch envelopes take effect on the next note. Stop all clears both keyboards.
 
 ### Keep the patch
 
 Save patch… opens a naming dialog. A new name makes a new entry; Replace saved patch explicitly updates an existing one. Export JSON keeps a file you can load in another browser or device. Render & listen plays the same phrase for comparisons and offers a WAV download.
+
+### Send someone your sound
+
+The address bar updates with your patch as you edit. Copy its URL or click Copy link to share the patch name, every setting and your operator notes. Opening the link restores that patch; the recipient enables audio and plays it. Saved libraries, held notes and MIDI device settings stay in your browser.
 
 ## Why
 
@@ -45,11 +49,11 @@ To make the relationships inside a sound playable and understandable. Each opera
 - One LFO with four assignable routes, and reverb for a shared sense of space.
 - Two touch keyboards with separate octave, detune and sustain latches. Drag to glide; tap a latched note again to release it.
 - MIDI and MPE input in supporting browsers, including independent pitch bend, pressure and timbre.
-- Ten starting patches, editable operator notes, named saves, JSON import/export and a repeatable five-second WAV audition.
+- Ten starting patches, editable operator notes, named saves, automatic patch URLs, JSON import/export and a repeatable five-second WAV audition.
 
 ## Privacy and saved patches
 
-Sound synthesis, playing and audition rendering happen in your browser. Saved patches stay in this browser on this site. No account, microphone access or model calls are needed. JSON export makes a portable copy.
+Sound synthesis, playing and audition rendering happen in your browser. Saved patches stay in this browser on this site. The address bar embeds the current patch, including its name, settings and operator notes, so anyone with the link can load it. No account, microphone access or model calls are needed. JSON export makes a portable copy.
 
 Saved patches do not automatically transfer between sites. Export JSON on the first site and Load patch here.
 
@@ -60,9 +64,10 @@ Saved patches do not automatically transfer between sites. Export JSON on the fi
 - [WebAssembly](https://webassembly.org/): Runs the C++ sound engine in the browser.
 - [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API): An AudioWorklet plays the engine; a separate instance renders repeatable auditions.
 - [Codex](https://openai.com/codex/): Implementation assistance, guided by Sarth’s sound-design and interaction choices.
+- [TypeScript Playground](https://www.typescriptlang.org/play/): Inspired the continuously updated URL that carries the current patch without a server-side save.
 
 ## Source
 
 Private repository: https://github.com/whiddershins/agent-synth-magic
-Revision: 7881deaafaa8ac3e8c29b82fd85214cc3603679e
+Revision: f09436c749dbeecdbcd8bcc81e630b3b50080416
 Release record: https://contraptions.bookofsarth.com/fm6.json
