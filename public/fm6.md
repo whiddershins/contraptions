@@ -64,5 +64,5 @@ Saved patches do not automatically transfer between sites. Export JSON on the fi
 ## Source
 
 Private repository: https://github.com/whiddershins/agent-synth-magic
-Revision: e6b1f523484b17e9ee3c6b97be3051e6f40a1fb4
+Revision: 7881deaafaa8ac3e8c29b82fd85214cc3603679e
 Release record: https://contraptions.bookofsarth.com/fm6.json

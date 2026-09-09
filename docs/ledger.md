@@ -29,7 +29,7 @@ Every ship gets README + slug md + DESIGN (when there is a product decision) and
 ## FM / 6
 
 - canonical and live: https://contraptions.bookofsarth.com/fm6/
-- source: https://github.com/whiddershins/agent-synth-magic (private), e6b1f523484b17e9ee3c6b97be3051e6f40a1fb4
+- source: https://github.com/whiddershins/agent-synth-magic (private), 7881deaafaa8ac3e8c29b82fd85214cc3603679e
 - poster: https://contraptions.bookofsarth.com/shots/fm6-og.png
 - description: Six operators. Two keyboards. A sound you can take apart.
 - related: Soundscape One
